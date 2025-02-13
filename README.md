@@ -7,6 +7,8 @@
 ### **Project Overview**  
 ProposalGPT is an AI-powered sales workflow and proposal automation platform that streamlines the sales process from lead capture to project kickoff. It leverages **OpenAI's GPT-based models (ChatGPT o3-mini-high)** for generating tailored proposals, integrates an **AI-driven calling system** for outbound client interactions, and consolidates all sales-related activities into a centralized dashboard. The platform is built on **React, Vite, TypeScript, TailwindCSS, shadcn/ui**, and **Supabase for authentication and backend management**.  
 
+> 💡 **Check out the [research section](https://github.com/ai-openai/ProposalGPT/blob/main/research.md) for an in-depth analysis of the tools and tech we are going with and why.**
+
 ## 📂 **GitHub Repository File Architecture - ProposalGPT**  
 
 Here’s the structured repository architecture for **ProposalGPT**, ensuring a clean, scalable, and maintainable codebase using **React (Vite) + TypeScript + TailwindCSS + shadcn/ui** on the frontend, and **Supabase (PostgreSQL, Auth, Storage, Edge Functions)** for the backend.  
