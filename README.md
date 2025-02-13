@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="https://i.imgur.com/UBNFggB.png" alt="ProposalGPT Logo" width="400">
+</p>
+
 ## ProposalGPT - Technical Software Specification  
 
 ### **Project Overview**  
