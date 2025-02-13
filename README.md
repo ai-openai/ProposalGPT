@@ -9,6 +9,12 @@ ProposalGPT is an AI-powered sales workflow and proposal automation platform tha
 
 > 💡 **Check out the [research section](https://github.com/ai-openai/ProposalGPT/blob/main/research.md) for an in-depth analysis of the tools and tech we are going with and why.**
 
+## Dashboard Preview
+
+<p align="center">
+  <img src="https://i.imgur.com/C1jibpp.png" alt="ProposalGPT Dashboard" width="1000">
+</p>
+
 ## 📂 **GitHub Repository File Architecture - ProposalGPT**  
 
 Here’s the structured repository architecture for **ProposalGPT**, ensuring a clean, scalable, and maintainable codebase using **React (Vite) + TypeScript + TailwindCSS + shadcn/ui** on the frontend, and **Supabase (PostgreSQL, Auth, Storage, Edge Functions)** for the backend.  
