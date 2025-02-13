@@ -3,6 +3,34 @@
 ### **Project Overview**  
 ProposalGPT is an AI-powered sales workflow and proposal automation platform that streamlines the sales process from lead capture to project kickoff. It leverages **OpenAI's GPT-based models (ChatGPT o3-mini-high)** for generating tailored proposals, integrates an **AI-driven calling system** for outbound client interactions, and consolidates all sales-related activities into a centralized dashboard. The platform is built on **React, Vite, TypeScript, TailwindCSS, shadcn/ui**, and **Supabase for authentication and backend management**.  
 
+## 📂 **GitHub Repository File Architecture - ProposalGPT**  
+
+Here’s the structured repository architecture for **ProposalGPT**, ensuring a clean, scalable, and maintainable codebase using **React (Vite) + TypeScript + TailwindCSS + shadcn/ui** on the frontend, and **Supabase (PostgreSQL, Auth, Storage, Edge Functions)** for the backend.  
+
+---
+
+### **📁 Root Directory Structure**
+```
+proposal-gpt/
+│── public/                      # Static assets (favicon, logos, etc.)
+│── src/                         # Main source code directory
+│   ├── components/              # UI Components
+│   ├── pages/                   # Page views
+│   ├── hooks/                   # Custom React hooks
+│   ├── context/                 # Context Providers (Auth, State)
+│   ├── services/                # API & Supabase interactions
+│   ├── utils/                   # Utility functions
+│   ├── types/                   # TypeScript type definitions
+│   ├── config/                   # Configurations (API keys, env variables)
+│── supabase/                    # Supabase edge functions & database setup
+│── scripts/                     # Deployment and setup scripts
+│── .env                         # Environment variables
+│── package.json                 # Dependencies and scripts
+│── tailwind.config.js           # TailwindCSS configuration
+│── tsconfig.json                # TypeScript configuration
+│── vite.config.ts               # Vite configuration
+│── README.md                    # Project documentation
+```
 ---
 
 ## **1. Tech Stack**  
@@ -159,3 +187,101 @@ ProposalGPT is an AI-powered sales workflow and proposal automation platform tha
 - **Telephony:** Twilio (VoIP for AI-driven calls)  
 
 ---
+
+## 📂 **Detailed File Breakdown**
+Below is a breakdown of all important files and directories:
+
+### **📂 `src/components/` - Reusable UI Components**
+```
+components/
+│── Navbar.tsx                   # Navigation bar
+│── Sidebar.tsx                  # Sidebar menu
+│── Button.tsx                   # Reusable button component
+│── Modal.tsx                    # Generic modal component
+│── Loader.tsx                   # Loading spinner
+│── Card.tsx                      # Generic card component
+│── Input.tsx                     # Custom input component
+│── ProposalEditor.tsx            # AI-powered proposal editor
+│── CallTranscript.tsx            # AI-generated call transcript viewer
+│── CRMIntegration.tsx            # CRM integration widget
+```
+
+### **📂 `src/pages/` - Page Views**
+```
+pages/
+│── Dashboard.tsx                 # Main dashboard
+│── Login.tsx                     # User login page
+│── Signup.tsx                    # Signup page
+│── Proposals.tsx                 # List of AI-generated proposals
+│── ProposalDetail.tsx            # Proposal details & editing
+│── Calls.tsx                      # Call logs & AI transcription analysis
+│── CRM.tsx                        # CRM integration settings
+│── Settings.tsx                   # User settings
+│── NotFound.tsx                   # 404 Page
+```
+
+### **📂 `src/hooks/` - Custom Hooks**
+```
+hooks/
+│── useAuth.ts                     # Authentication logic using Supabase
+│── useProposals.ts                 # Fetch and manage AI-generated proposals
+│── useCalls.ts                     # Handle AI-driven call logs
+│── useCRM.ts                        # CRM API integration
+```
+
+### **📂 `src/context/` - Context Providers**
+```
+context/
+│── AuthContext.tsx                 # Provides authentication state
+│── ProposalContext.tsx             # Manages proposal-related state
+│── CallContext.tsx                  # Handles AI call logs & summaries
+```
+
+### **📂 `src/services/` - API & Supabase Interactions**
+```
+services/
+│── authService.ts                  # User authentication API (Supabase)
+│── proposalService.ts               # AI-based proposal management
+│── callService.ts                   # AI-driven call logs and transcriptions
+│── crmService.ts                    # CRM integration API calls
+│── supabaseClient.ts                 # Supabase client configuration
+```
+
+### **📂 `src/utils/` - Utility Functions**
+```
+utils/
+│── formatDate.ts                    # Helper function to format dates
+│── apiHelper.ts                      # Fetch wrapper with error handling
+│── aiParser.ts                        # AI-based response processing
+```
+
+### **📂 `src/types/` - TypeScript Type Definitions**
+```
+types/
+│── authTypes.ts                      # Types for authentication
+│── proposalTypes.ts                   # Proposal-related types
+│── callTypes.ts                        # AI call log types
+│── crmTypes.ts                         # CRM integration types
+```
+
+### **📂 `supabase/` - Edge Functions & Database**
+```
+supabase/
+│── functions/
+│   ├── generateProposal.ts            # AI-powered proposal generation (GPT-4)
+│   ├── transcribeCall.ts               # AI call transcription processing
+│   ├── analyzeCall.ts                  # Extract key data from transcriptions
+│── migrations/
+│   ├── 001_create_users.sql             # User table schema
+│   ├── 002_create_proposals.sql         # Proposals table schema
+│   ├── 003_create_calls.sql             # Calls table schema
+│── storage/
+│   ├── proposals/                        # PDF & document storage
+```
+
+### **📂 `scripts/` - Deployment & Setup Scripts**
+```
+scripts/
+│── deploy.sh                           # Deployment script for Vercel/Supabase
+│── dbSetup.sql                         # Initial database setup script
+```
